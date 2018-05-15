@@ -11,3 +11,6 @@ lib64
 *.pyc
 *.pyo
 venv
+.iws
+workspace.xml
+tasks.xml
