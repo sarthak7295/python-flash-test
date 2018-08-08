@@ -10,7 +10,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 def hello_world():
-    return "Hello Linux World"
+    return render_template('upl.html')
 
 
 @app.route('/hello')
@@ -31,6 +31,14 @@ def show_blog(post_id):
 @app.route('/helloheading')
 def index():
     return render_template('hello.html', name='sarthak')
+
+@app.route('/save', methods=['GET', 'POST'])
+def save_image():
+    data = request.data
+    print(data)
+    return render_template('hello.html', name='sarthak')
+
+
 
 def allowed_file(filename):
     return '.' in filename and \
